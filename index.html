@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>小宝宝的私人订制2048游戏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <style>
         body {
             display: flex;
@@ -91,7 +92,39 @@
 </head>
 <body>
     <h1>2048基础版</h1>
-    
+    /* 在body样式中添加这些属性 */
+body {
+    /* 保持原有的其他样式 */
+    min-height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    touch-action: none;
+}
+
+/* 修改游戏容器的样式 */
+#game {
+    width: 100%;
+    max-width: 400px;  /* 或者您想要的最大宽度 */
+    margin: 0 auto;
+    touch-action: none;
+}
+
+/* 修改网格容器的样式 */
+#grid {
+    /* 保持原有的其他样式 */
+    width: 100%;
+    touch-action: none;
+}
+
+/* 确保所有控制按钮和状态栏也是响应式的 */
+.stats, .controls {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px;
+}
     <div class="stats">
         <div class="stat-box">
             <div>分數</div>
